@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "documentDB",
+      "name": "queryStorage",
+      "databaseName": "weather",
+      "collectionName": "history",
+      "sqlQuery": "select * from c where c.clientId = {clientId} order by c.zipTime DESC",
+      "connection": "weatherpoc2_DOCUMENTDB",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

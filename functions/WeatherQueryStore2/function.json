@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "name": "queryItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "queryhistory",
+      "connection": "azurepoc_STORAGE"
+    },
+    {
+      "type": "documentDB",
+      "name": "newDocument",
+      "databaseName": "weather",
+      "collectionName": "history",
+      "createIfNotExists": true,
+      "connection": "weatherpoc2_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

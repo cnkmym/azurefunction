@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post",
+        "put"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "documentDB",
+      "name": "queryStorage",
+      "databaseName": "weather",
+      "collectionName": "history",
+      "createIfNotExists": true,
+      "connection": "weatherpoc2_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
