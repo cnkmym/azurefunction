@@ -2,6 +2,7 @@
   "name": "WReport",
   "version": "0.0.1",
   "description": "Weather Report",
+  "main": "app.js",
   "private": true,
   "dependencies": {
     "body-parser": "*",
@@ -14,6 +15,9 @@
   },
   "engines": {
     "node": "4.2.1"
+  },
+  "scripts": {
+    "start": "node app.js"
   },
   "devDependencies": {
     "chai": "^3.4.0",
